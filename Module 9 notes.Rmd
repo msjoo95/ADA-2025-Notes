@@ -1,0 +1,32 @@
+---
+title: "Module 9 notes"
+author: "Minsoo Joo"
+date: "2025-01-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Notes
+
+```{r}
+library(tidyverse)
+
+matrix(1:30, nrow=5, ncol=6, byrow = T)
+a<-array(1:90, dim=c(5,6,3))
+attributes(a)
+```
+
+
+```{r}
+library(readr)
+f <- "https://raw.githubusercontent.com/difiore/ada-datasets/refs/heads/main/CPDS-1960-2014-reduced.csv"
+df <- read_csv(
+  file = f,
+  col_names = TRUE
+)
+df
+```
+
